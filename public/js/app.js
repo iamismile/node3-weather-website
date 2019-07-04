@@ -18,7 +18,7 @@ weatherForm.addEventListener("submit", (e) => {
   error.style.display = "block";
   error.textContent = "Loading...";
 
-  fetch(`http://localhost:3000/weather?address=${location}`).then(response => {
+  fetch(`/weather?address=${location}`).then(response => {
   response.json().then(data => {
     if (data.error) {
       forecastDiv.style.display = "none";
