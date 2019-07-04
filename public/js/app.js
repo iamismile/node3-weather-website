@@ -8,6 +8,8 @@ const icon = document.querySelector("img.icon");
 const country = document.querySelector("h3.country");
 const summary = document.querySelector("p.summary");
 const temp = document.querySelector("p.temp");
+const low = document.querySelector("p.low span");
+const high = document.querySelector("p.high span");
 
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -30,7 +32,9 @@ weatherForm.addEventListener("submit", (e) => {
       icon.setAttribute("src", `/img/icons/${data.forecast.icon}.svg`);
       country.textContent = data.location;
       summary.textContent = data.forecast.summary;
-      temp.innerHTML =  `${data.forecast.temperature} &deg;C`;
+      temp.innerHTML =  `${data.forecast.temperature}&deg;C`;
+      low.innerHTML = `${data.forecast.temperatureLow}&deg;`;
+      high.innerHTML = `${data.forecast.temperatureHigh}&deg;`;
     }
     });
   });

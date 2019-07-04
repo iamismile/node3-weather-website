@@ -88,6 +88,7 @@ p.error {
   width: 370px;
   margin: 30px auto;
   background: #F0E68C;
+  overflow: auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
 }
 
@@ -102,7 +103,7 @@ figure img {
 }
 
 .forecastDetails {
-  padding: 25px 10px;
+  padding: 25px 10px 0;
   color: #222;
 }
 
@@ -115,6 +116,18 @@ figure img {
 .forecastDetails .temp {
   font-size: 56px;
   letter-spacing: 0.2rem;
+}
+
+p.low,
+p.high {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 16px 0;
+  font-weight: 400;
+}
+
+p.low {
+  margin-right: 30px;
 }
 
 footer {
